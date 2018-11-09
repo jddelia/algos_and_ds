@@ -31,6 +31,13 @@ class BinaryTree:
             new_node.right_child = self.right_child
             self.right_child = new_node
 
+    def preorder(self):
+        print(self.key)
+        if self.get_left_child():
+            self.get_left_child().preorder()
+        if self.get_right_child():
+            self.get_right_child().preorder()
+
     def get_right_child(self):
         return self.right_child
 
